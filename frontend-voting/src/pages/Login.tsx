@@ -7,6 +7,14 @@ export default function Login() {
     const [error, setError] = useState("");
 
     const handleLogin = () => {
+        // Email validation using regex
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            setError("Invalid email format");
+            toast.error("Login Failed");
+            return;
+        }
+
         // Simple validation for demonstration purposes
         if (email === "user@example.com" && password === "password") {
             toast.success("Login Successful");
