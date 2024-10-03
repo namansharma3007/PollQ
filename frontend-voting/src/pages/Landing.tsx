@@ -15,7 +15,7 @@ const Landing = () => {
       <div className={`flex justify-between items-center p-6 border-b-2 ${isDarkMode ? 'border-white' : 'border-gray-900'}`}>
         <div className="text-xl ">
           <button className="mt-4 px-6 py-3 bg-purple-500 text-white rounded-full hover:bg-purple-600 text-base" onClick={() => setShow(true)}>
-            Login
+            Options
           </button>
           {show && <Sidebar show={show} onClose={() => setShow(false)} />}
           <span className="px-4">PollQ</span>
