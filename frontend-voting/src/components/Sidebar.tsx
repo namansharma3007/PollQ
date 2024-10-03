@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { FaBars, FaHome, FaUser, FaPlus, FaPoll, FaList, FaSearch, FaSignOutAlt } from "react-icons/fa";
+import { FaBars, FaHome, FaUser, FaPlus, FaPoll, FaList, FaSearch, FaSignOutAlt, FaChartBar } from "react-icons/fa";
 
 export default function Sidebar() {
   const [isCollapsed, setIsCollapsed] = useState(true);
@@ -40,6 +40,10 @@ export default function Sidebar() {
             <Link to={"/search"} className="custom-sidebar-links flex items-center gap-2">
               <FaSearch />
               {!isCollapsed && "Search Polls"}
+            </Link>
+            <Link to={"/results"} className="custom-sidebar-links flex items-center gap-2">
+              <FaChartBar />
+              {!isCollapsed && "Results"}
             </Link>
             <Link to={"/logout"} className="custom-sidebar-links flex items-center gap-2">
               <FaSignOutAlt />

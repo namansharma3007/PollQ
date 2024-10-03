@@ -12,6 +12,7 @@ import Sidebar from "./components/Sidebar";
 //@ts-ignore
 import CreateNewPoll from "./pages/CreateNewpoll";
 import PageNotFound from "./components/PageNotFound";
+import Result from "./pages/Result";
 
 function App() {
   const [authCheck, setAuthCheck] = useState<boolean>(false);
@@ -45,6 +46,7 @@ function App() {
               <Route path="*" element={<PageNotFound />} />
               <Route path="/home" element={<Home />} />
               <Route path="/createnewpoll" element={<CreateNewPoll />} />
+              <Route path="/results" element={<Result />} />
             </Routes>
           </div>
         )}
