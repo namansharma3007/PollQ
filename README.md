@@ -4,13 +4,13 @@ Welcome to the **Voting App** repository! This project allows users to create, m
 
 ## Scope for this project
 
-- **Creation of UI/UX** (This is the major part).
-- Figma design will also work.
-- Ideas for the scope of this project (Must be written in [IDEAS.md](./IDEAS.md) file).
-- Creation of backend/database.
-- Creation of frontend (Majorly dark theme).
-- How to scale is globally.
-- Restrictions to user. User should be able to vote once per poll event.
+- **Creation of UI/UX** (This is the major part). 🎨  
+- Figma design will also work. 🖌️  
+- Ideas for the scope of this project (Must be written in [IDEAS.md](./IDEAS.md) file). 💡  
+- Creation of backend/database. 🗄️  
+- Creation of frontend (Majorly dark theme). 🌙  
+- How to scale is globally. 🌍  
+- Restrictions to user. User should be able to vote once per poll event. 🚫🗳️
 
 ## Table of Contents
 
@@ -21,17 +21,18 @@ Welcome to the **Voting App** repository! This project allows users to create, m
   - [Backend Setup](#backend-setup)
   - [Frontend Setup](#frontend-setup)
 - [Contributing](#contributing)
+- [Note](#note)
 - [License](#license)
 
 ## Features
 
-- User authentication (Login/Register)
-- Create and manage polls
-- Real-time vote updates
-- Responsive and intuitive user interface
-- Data persistence with MongoDB
-- Backend REST API built with Node.js
-- Frontend built with Vite (Vue.js or React, as applicable)
+- User authentication (Login/Register) 🔑
+- Create and manage polls 🗳️
+- Real-time vote updates ⚡
+- Responsive and intuitive user interface 📱
+- Data persistence with MongoDB 💾
+- Backend REST API built with Node.js 🖥️
+- Frontend built with Vite (React/Vite, as applicable) 🚀
 
 ## Tech Stack
 
@@ -116,12 +117,17 @@ Make sure you have the following installed:
 ### Contributing
 Contributions are welcome! To contribute:
 
-- Fork the repository.
-- Create a new branch (git checkout -b feature-branch).
-- Make your changes.
-- Commit your changes (git commit -m 'Add new feature').
-- Push to the branch (git push origin feature-branch).
-- Open a Pull Request.
+- Fork the repository. 🍴
+- Create a new branch (git checkout -b feature-branch). 🌳
+- Make your changes. ✏️
+- Commit your changes (git commit -m 'Add new feature'). 💾
+- Push to the branch (git push origin feature-branch). 📤
+- Open a Pull Request. 🔄
+
+### Note:
+- We encourage you to raise any issues or suggestions you may have! Your feedback is valuable! 🙌
+- Let’s embark on this journey together and make it a fun and enriching learning experience for everyone! 🚀✨
+
 
 
 ## License
