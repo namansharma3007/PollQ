@@ -1,6 +1,5 @@
-// src/App.tsx
 import { useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 import Landing from "./pages/Landing";
 import NavBar from "./components/NavBar";
@@ -9,39 +8,26 @@ import Signup from "./pages/Signup";
 import Registration from "./pages/Registration";
 import Ballotview from "./pages/Ballotview";
 import Home from "./pages/Home";
-import CreateNewPoll from "./pages/CreateNewPoll";
-import PageNotFound from "./components/PageNotFound"; 
-import { Outlet } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
-
-const AuthLayout = () => {
-  return (
-    <>
-      <NavBar />
-      <Outlet />
-    </>
-  );
-};
-const NonAuthLayout = () => {
-  return (
-    <div className="flex p-1">
-      <Sidebar />
-      <Outlet />
-    </div>
-  );
-};
+//@ts-ignore
+import CreateNewPoll from "./pages/CreateNewpoll";
+import PageNotFound from "./components/PageNotFound";
 
 function App() {
   const [authCheck, setAuthCheck] = useState<boolean>(false);
-
   return (
     <div className="overflow-y-auto overflow-x-hidden">
-      <Toaster />
+      <div>
+        <Toaster />
+      </div>
       <div className="h-screen w-screen absolute -z-10 bg-black-p"></div>
-      <div className="relative">
-        <Routes>
-          {!authCheck ? (
-            <Route element={<AuthLayout />}>
+
+      <div className="">
+        {authCheck && (
+          <div className="relative">
+            <NavBar />
+            <Routes>
+              <Route path="*" element={<PageNotFound />} />
               <Route path="/" element={<Landing />} />
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
@@ -60,15 +46,11 @@ function App() {
               <Route path="*" element={<PageNotFound />} />
               <Route path="/home" element={<Home />} />
               <Route path="/createnewpoll" element={<CreateNewPoll />} />
-            </Route>
-          ) : (
-            <Route element={<NonAuthLayout />}>
-              <Route path="/home" element={<Home />} />
-              <Route path="/createnewpoll" element={<CreateNewPoll />} />
-            </Route>
-          )}
-          <Route path="*" element={<PageNotFound />} />
-        </Routes>
+            </Routes>
+          </div>
+        )}
+
+        <div></div>
       </div>
     </div>
   );
