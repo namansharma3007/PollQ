@@ -1,0 +1,1 @@
+# All the ideas scope must be written here

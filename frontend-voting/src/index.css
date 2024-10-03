@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.custom-nav-links {
+  @apply text-white relative ease-in-out duration-200;
+}
+
+.custom-nav-links:hover {
+  @apply text-neon-blue-p;
+}
+
+.custom-sidebar-links{
+  @apply text-white w-full hover:bg-white ease-in-out duration-200 rounded-xl hover:text-black px-4 py-2;
+}
+
+.input-field-set{
+  @apply w-full flex justify-between items-center;
+}
+.input-field-set > label{
+  @apply text-white;
+}
+
+.input-field{
+  @apply w-[23rem] py-2 px-4 rounded-xl focus:outline-none bg-transparent border-2 border-gray-500 text-white;
+}
