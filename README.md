@@ -88,7 +88,7 @@ Make sure you have the following installed:
 3. Start the server.
 
 ```bash
- npm start
+ node index.js
 ```
 ### Frontend Setup
 
