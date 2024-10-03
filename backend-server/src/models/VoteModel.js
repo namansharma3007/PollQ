@@ -13,7 +13,7 @@ const voteSchema = new Schema({
     required: true,
   },
   option: {
-    type: String,
+    type: Boolean,
     required: true,
   },
   createdAt: {
