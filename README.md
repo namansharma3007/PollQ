@@ -95,7 +95,7 @@ Make sure you have the following installed:
 1. Navigate to the frontend-server directory separately.
 
 ```bash
- cd frontend-server
+ cd frontend-voting
 ```
 
 2. Install the required dependencies.
