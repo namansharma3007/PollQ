@@ -42,7 +42,6 @@ function App() {
           <div className="p-1 flex">
             <Sidebar />
             <Routes>
-              <Route path="*" element={<PageNotFound />} />
               <Route path="/home" element={<Home />} />
               <Route path="/createnewpoll" element={<CreateNewPoll />} />
             </Routes>
