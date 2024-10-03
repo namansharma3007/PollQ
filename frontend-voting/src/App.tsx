@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 import Landing from "./pages/Landing";
 import NavBar from "./components/NavBar";
@@ -11,9 +11,12 @@ import Home from "./pages/Home";
 import Sidebar from "./components/Sidebar";
 //@ts-ignore
 import CreateNewPoll from "./pages/CreateNewpoll";
+import ForgotPassword from "./pages/ForgotPassword";
 
 function App() {
   const [authCheck, setAuthCheck] = useState<boolean>(false);
+  const location = useLocation();
+  console.log(location.pathname);
   return (
     <>
       <div>
@@ -25,9 +28,6 @@ function App() {
           <div className="relative">
             <NavBar />
             <Routes>
-              <Route path="/" element={<Landing />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/signup" element={<Signup />} />
               <Route path="/registration" element={<Registration />} />
               <Route path="/ballotview" element={<Ballotview />} />
               {/* <Route path="/home" element={<Home />} /> */}
@@ -37,10 +37,17 @@ function App() {
 
         {!authCheck && (
           <div className="relative flex">
-            <Sidebar />
+            {!["/login", "/signup", "/forgot-password", "/"].includes(
+              location.pathname
+            ) && <Sidebar show={undefined} onClose={undefined} />}
+
             <Routes>
+              <Route path="/" element={<Landing />} />
               <Route path="/home" element={<Home />} />
               <Route path="/createnewpoll" element={<CreateNewPoll />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/signup" element={<Signup />} />
+              <Route path="/forgot-password" element={<ForgotPassword />} />
             </Routes>
           </div>
         )}

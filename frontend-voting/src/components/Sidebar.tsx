@@ -8,9 +8,12 @@ import {
   FaList,
   FaSearch,
   FaSignOutAlt,
+  FaSignInAlt,
 } from "react-icons/fa";
+import { useState } from "react";
 
-export default function Sidebar({ show, onClose }) {
+export default function Sidebar({ show, onclose }) {
+  const [isCollapsed, setIsCollapsed] = useState(false);
   return (
     <div className={`h-[43rem] w-20`}>
       <div
@@ -40,7 +43,7 @@ export default function Sidebar({ show, onClose }) {
           </div>
 
           <button
-            onClick={onClose}
+            onClick={onclose}
             className="mt-4 px-6 py-2 bg-red-500 text-white rounded-full hover:bg-red-600"
           >
             Cancel
@@ -89,6 +92,14 @@ export default function Sidebar({ show, onClose }) {
               <FaSearch />
               {"Search Polls"}
             </Link>
+            <Link
+              to={"/login"}
+              className="custom-nav-links flex gap-3 pl-4 items-center"
+            >
+              <FaSignInAlt />
+              {"Login"}
+            </Link>
+
             <Link
               to={"/logout"}
               className="custom-sidebar-links flex items-center gap-2"
