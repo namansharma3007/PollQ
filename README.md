@@ -207,7 +207,7 @@ Make sure you have the following installed:
    Go to the GitHub page of your forked repository. You should see a prompt to create a pull request (PR). Click on it, compare the changes, and create the PR.
 <br><br>
 
-<p style="font-family:var(--ff-philosopher);font-size:3rem;text-align:center;"><b>Contributing
+<p id="contributing" style="font-family:var(--ff-philosopher);font-size:3rem;text-align:center;"><b>Contributing
 
 <p style="font-family:var(--ff-philosopher);font-size:2rem;">We love your input! We want to make contributing to this project as easy and transparent as possible, whether it's.
 
