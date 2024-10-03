@@ -207,7 +207,7 @@ Make sure you have the following installed:
    Go to the GitHub page of your forked repository. You should see a prompt to create a pull request (PR). Click on it, compare the changes, and create the PR.
 <br><br>
 
-<p style="font-family:var(--ff-philosopher);font-size:3rem;text-align:center;"><b>Contributing
+<p id="contributing" style="font-family:var(--ff-philosopher);font-size:3rem;text-align:center;"><b>Contributing
 
 <p style="font-family:var(--ff-philosopher);font-size:2rem;">We love your input! We want to make contributing to this project as easy and transparent as possible, whether it's.
 
@@ -223,7 +223,7 @@ To get started with contributing, please follow the steps outlined in the [Contr
 <div align="center">
   <h2 style="font-size:3rem;">Our Contributors <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Red%20Heart.png" alt="Red Heart" width="40" height="40" /></h2>
   <h3>Thank you for contributing to our repository</h3>
-<a href="https://github.com/Anjaliavv51/Retro/graphs/contributors">
+<a href="https://github.com/namansharma3007/PollQ/graphs/contributors">
 <img src="https://contributors-img.web.app/image?repo=namansharma3007/PollQ"/>
 
   </a>
