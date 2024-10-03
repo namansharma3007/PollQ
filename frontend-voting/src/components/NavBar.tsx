@@ -26,12 +26,13 @@ export default function NavBar() {
             </div>
 
             <div className="flex gap-8 items-center">
-              <button
-                className="bg-gray-p px-6 py-2 rounded-xl hover:bg-gray-700 ease-in-out duration-200 text-white"
-                onClick={handleClick}
-              >
-                Login
-              </button>
+              <Link to={"/login"} className="custom-nav-links">
+                <button
+                  className="bg-gray-p px-6 py-2 rounded-xl hover:bg-gray-700 ease-in-out duration-200 text-white"
+                >
+                    Login
+                </button>
+                </Link>
               <button className="text-white px-6 py-2 bg-purple-shade-p rounded-xl ease-in-out duration-200 hover:bg-dark-purple-shade-p">
                 Get Started
               </button>

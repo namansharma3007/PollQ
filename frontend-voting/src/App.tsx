@@ -15,12 +15,12 @@ import CreateNewPoll from "./pages/CreateNewpoll";
 function App() {
   const [authCheck, setAuthCheck] = useState<boolean>(false);
   return (
-    <>
+    <div className="overflow-y-auto overflow-x-hidden">
       <div>
         <Toaster />
       </div>
       <div className="h-screen w-screen absolute -z-10 bg-black-p"></div>
-      <div>
+      <div className="">
         {authCheck && (
           <div className="relative">
             <NavBar />
@@ -36,7 +36,7 @@ function App() {
         )}
 
         {!authCheck && (
-          <div className="relative flex">
+          <div className="p-1 flex">
             <Sidebar />
               <Routes>
                 <Route path="/home" element={<Home />} />
@@ -47,7 +47,7 @@ function App() {
 
         <div></div>
       </div>
-    </>
+    </div>
   );
 }
 
