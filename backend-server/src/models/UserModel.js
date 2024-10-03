@@ -30,7 +30,7 @@ const userSchema = new Schema(
       type: String,
       required: true,
       minLength: 8,
-      maxLength: 10,
+      maxLength: 20,
     },
   },
   { timestamps: true },
@@ -45,4 +45,4 @@ userSchema.index(
 
 const UserModel = mongoose.model('User', userSchema, 'users');
 
-module.exports = UserModel;
+export default UserModel;

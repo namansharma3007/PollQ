@@ -47,6 +47,17 @@ function App() {
               <Route path="/signup" element={<Signup />} />
               <Route path="/registration" element={<Registration />} />
               <Route path="/ballotview" element={<Ballotview />} />
+              {/* <Route path="/home" element={<Home />} /> */}
+            </Routes>
+          </div>
+        )}
+
+        {!authCheck && (
+          <div className="">
+            {/* <Sidebar /> */}
+            <Routes>
+              <Route path="/" element={<Landing />} />
+              <Route path="*" element={<PageNotFound />} />
               <Route path="/home" element={<Home />} />
               <Route path="/createnewpoll" element={<CreateNewPoll />} />
             </Route>
