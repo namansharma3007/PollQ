@@ -18,7 +18,7 @@ const Landing = () => {
             Login
           </button>
           {show && <Sidebar show={show} onClose={() => setShow(false)} />}
-          <span className="px-4">Let's Vote</span>
+          <span className="px-4">PollQ</span>
         </div>
         <nav className="space-x-6">
           <a href="#about" className={`hover:text-blue-500 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>About</a>
