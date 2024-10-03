@@ -4,7 +4,22 @@ import { FcGoogle } from "react-icons/fc";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai"; // Import eye icons
 
 export default function Signup() {
-  const [passwordVisible, setPasswordVisible] = useState(false); // State to manage password visibility
+  // States to store user input
+  const [fullName, setFullName] = useState<string>(""); // Full name
+  const [email, setEmail] = useState<string>(""); // Email
+  const [password, setPassword] = useState<string>(""); // Password
+  const [passwordVisible, setPasswordVisible] = useState(false); // Password visibility toggle
+
+  // Function to handle form submission
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // You can handle form submission logic here (e.g., call an API or validate inputs)
+    console.log({
+      fullName,
+      email,
+      password,
+    });
+  };
 
   return (
     <div className="flex flex-col md:flex-row w-full">
@@ -26,7 +41,7 @@ export default function Signup() {
           <h2 className="mt-2 text-center text-2xl font-bold leading-9 tracking-tight text-white">
             Create your account
           </h2>
-          <form className="space-y-6 mt-6" action="#" method="POST">
+          <form className="space-y-6 mt-6" onSubmit={handleSubmit}>
             <div>
               <label className="block text-sm font-medium leading-6 text-gray-300">
                 Full Name
@@ -36,6 +51,8 @@ export default function Signup() {
                   id="name"
                   name="name"
                   type="text"
+                  value={fullName}
+                  onChange={(e) => setFullName(e.target.value)} // Bind state to input
                   required
                   placeholder="Enter your full name"
                   className="block w-full rounded-md border-0 py-1.5 pl-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-700 placeholder:text-gray-500 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
@@ -52,6 +69,8 @@ export default function Signup() {
                   id="email"
                   name="email"
                   type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)} // Bind state to input
                   required
                   placeholder="Enter your email"
                   className="block w-full rounded-md border-0 py-1.5 pl-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-700 placeholder:text-gray-500 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
@@ -68,6 +87,8 @@ export default function Signup() {
                   id="password"
                   name="password"
                   type={passwordVisible ? "text" : "password"} // Toggle input type based on state
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)} // Bind state to input
                   required
                   placeholder="Enter your password"
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm pl-3 ring-1 ring-inset ring-gray-700 placeholder:text-gray-500 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
