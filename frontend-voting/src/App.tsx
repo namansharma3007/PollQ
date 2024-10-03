@@ -39,9 +39,10 @@ function App() {
         )}
 
         {!authCheck && (
-          <div className="p-1 flex">
-            <Sidebar />
+          <div className="">
+            {/* <Sidebar /> */}
             <Routes>
+              <Route path="/" element={<Landing />} />
               <Route path="*" element={<PageNotFound />} />
               <Route path="/home" element={<Home />} />
               <Route path="/createnewpoll" element={<CreateNewPoll />} />
