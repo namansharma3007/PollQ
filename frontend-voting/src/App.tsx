@@ -11,20 +11,23 @@ import Home from "./pages/Home";
 import Sidebar from "./components/Sidebar";
 //@ts-ignore
 import CreateNewPoll from "./pages/CreateNewpoll";
+import PageNotFound from "./components/PageNotFound";
 
 function App() {
   const [authCheck, setAuthCheck] = useState<boolean>(false);
   return (
-    <>
+    <div className="overflow-y-auto overflow-x-hidden">
       <div>
         <Toaster />
       </div>
       <div className="h-screen w-screen absolute -z-10 bg-black-p"></div>
-      <div>
+
+      <div className="">
         {authCheck && (
           <div className="relative">
             <NavBar />
             <Routes>
+              <Route path="*" element={<PageNotFound />} />
               <Route path="/" element={<Landing />} />
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
@@ -36,18 +39,19 @@ function App() {
         )}
 
         {!authCheck && (
-          <div className="relative flex">
+          <div className="p-1 flex">
             <Sidebar />
-              <Routes>
-                <Route path="/home" element={<Home />} />
-                <Route path="/createnewpoll" element={<CreateNewPoll />} />
-              </Routes>
+            <Routes>
+              <Route path="*" element={<PageNotFound />} />
+              <Route path="/home" element={<Home />} />
+              <Route path="/createnewpoll" element={<CreateNewPoll />} />
+            </Routes>
           </div>
         )}
 
         <div></div>
       </div>
-    </>
+    </div>
   );
 }
 
