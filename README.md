@@ -6,7 +6,7 @@ Welcome to the **Voting App** repository! This project allows users to create, m
 
 - **Creation of UI/UX** (This is the major part).
 - Figma design will also work.
-- Ideas for the scope of this project.
+- Ideas for the scope of this project (Must be written in [IDEAS.md](./IDEAS.md) file).
 - Creation of backend/database.
 - Creation of frontend (Majorly dark theme).
 - How to scale is globally.
