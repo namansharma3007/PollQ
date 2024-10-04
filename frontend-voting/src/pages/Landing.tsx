@@ -3,9 +3,6 @@ import { useState } from "react";
 import Sidebar from "../components/Sidebar";
 import { Link } from "react-router-dom";
 
-import { useState } from 'react';
-import Sidebar from '../components/Sidebar';
-
 const Landing = () => {
   const [isDarkMode, setIsDarkMode] = useState(true); // Default to dark mode
   const [show, setShow] = useState(false);
@@ -57,7 +54,7 @@ const Landing = () => {
           <Link to={"/login"}>login</Link>
           <button
             onClick={toggleDarkMode}
-            className={`mt-4 px-6 py-3 rounded-full bg-purple-500 text-white hover:bg-purple-600`}
+            className={`mt-4 px-6 py-3 rounded-full bg-purple-500 text-white hover:bg-purple-600`}/
           >
             {isDarkMode ? "Light Mode" : "Dark Mode"}
 =======

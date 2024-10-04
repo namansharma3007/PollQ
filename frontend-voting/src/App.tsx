@@ -54,7 +54,7 @@ function App() {
 
         <div></div>
 
-              <Route path="/contact" element={<ContactUs />} />
+              {/* <Route path="/contact" element={<ContactUs />} />
 
             </Route>
           ) : (
@@ -66,6 +66,7 @@ function App() {
           <Route path="*" element={<PageNotFound />} />
         </Routes>
 
+      </div> */}
       </div>
     </>
   );
