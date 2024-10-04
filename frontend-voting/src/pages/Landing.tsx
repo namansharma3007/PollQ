@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Sidebar from '../components/Sidebar';
 
 const Landing = () => {
@@ -22,7 +22,7 @@ const Landing = () => {
         </div>
         <nav className="space-x-6">
           <a href="#about" className={`hover:text-blue-500 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>About</a>
-          <a href="#contact" className={`hover:text-blue-500 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Contact</a>
+          <a href="/contact" className={`hover:text-blue-500 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Contact</a>
           <button 
             onClick={toggleDarkMode} 
             className={`mt-4 px-6 py-3 rounded-full bg-purple-500 text-white hover:bg-purple-600`}>
