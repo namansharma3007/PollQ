@@ -135,7 +135,15 @@ Make sure you have the following installed:
  npm install
 ```
 
-3. Start the server.
+3. Create a .env file in the backend-server directory and add the following variables
+
+```bash
+ MONGODB_URI = your mongodb uri of the new mongo db you created for this project
+ PORT = your preferred port
+```
+
+
+4. Start the server.
 
 ```bash
  node index.js
