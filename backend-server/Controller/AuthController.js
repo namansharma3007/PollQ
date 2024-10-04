@@ -1,7 +1,8 @@
 // Import statements (ESM syntax)
 import express from "express";
 import dotenv from "dotenv";
-import User from "../Models/User.js";
+// import User from "../Models/User.js";
+import UserModel from "../src/models/UserModel.js";
 import bcrypt from "bcrypt"
 
 dotenv.config();
@@ -11,13 +12,13 @@ const router = express.Router();
 
 const signup = async (req, res) => {
     try {
-        const { firstName, lastName, userBio, userEmail, userName, userPassword } = req.body;
+        const { firstName, lastName, userBio, userEmail, userPassword } = req.body;
 
         if (!userPassword) {
             return res.status(400).json({ error: "Password is required" });
         }
         // Check if user already exists
-        const existingUser = await User.findOne({ userEmail });
+        const existingUser = await UserModel.findOne({ userEmail });
         
         if (existingUser) {
             return res.status(401).send("User Already Exists with this email");
@@ -29,13 +30,12 @@ const signup = async (req, res) => {
         const salt = await bcrypt.genSalt(saltRounds);
         const encryptedPassword = await bcrypt.hash(password, salt);
 
-        const newUser = new User({
+        const newUser = new UserModel({
             firstName,
             lastName,
             userBio,
-            userEmail,
-            userName,
-            userPassword: encryptedPassword,
+            email: userEmail,
+            password: encryptedPassword,
         });
 
         await newUser.save();
@@ -51,4 +51,29 @@ const signup = async (req, res) => {
     }
 };
 
-export default {signup}
+const login = async(req, res) =>{
+    try {
+        const { userEmail, userPassword } = req.body;
+
+        const user = await UserModel.findOne({ email: userEmail });
+
+        if (user) {
+            const passwordMatch = await bcrypt.compare(userPassword, user.password);
+            if (passwordMatch) {
+                return res.json(user);
+            } else {
+                console.log("Password didn't match!!");
+                return res.json({ status: "Error", getUser: false });
+            }
+        } else {
+            console.log("Unable to find user");
+            return res.json({ status: "Error", getUser: false });
+        }
+
+    } catch (error) {
+        res.status(400).json({ error: error.message });
+    }
+
+}
+
+export default {signup, login}

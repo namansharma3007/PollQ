@@ -11,11 +11,11 @@
 <table align="center">
     <thead align="center">
         <tr border: 1px;>
-            <td><b><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/tarikul-islam-anik/main/assets/images/Star.png" width="20" height="20"> Stars</b></td>
+            <td><b><img src="https://raw.githubcontent.com/Tarikul-Islam-Anik/tarikul-islam-anik/main/assets/images/Star.png" width="20" height="20"> Stars</b></td>
             <td><b>🍴 Forks</b></td>
-            <td><b><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/tarikul-islam-anik/main/assets/images/Lady%20Beetle.png" width="20" height="20"> Issues</b></td>
-            <td><b><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/tarikul-islam-anik/main/assets/images/Check%20Mark%20Button.png" width="20" height="20"> Open PRs</b></td>
-            <td><b><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/tarikul-islam-anik/main/assets/images/Cross%20Mark.png" width="20" height="20"> Closed PRs</b></td>
+            <td><b><img src="https://raw.githubcontent.com/Tarikul-Islam-Anik/tarikul-islam-anik/main/assets/images/Lady%20Beetle.png" width="20" height="20"> Issues</b></td>
+            <td><b><img src="https://raw.githubcontent.com/Tarikul-Islam-Anik/tarikul-islam-anik/main/assets/images/Check%20Mark%20Button.png" width="20" height="20"> Open PRs</b></td>
+            <td><b><img src="https://raw.githubcontent.com/Tarikul-Islam-Anik/tarikul-islam-anik/main/assets/images/Cross%20Mark.png" width="20" height="20"> Closed PRs</b></td>
         </tr>
      </thead>
     <tbody>
@@ -30,13 +30,13 @@
 </table>
 </div>
 
-<h3> <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" alt="Rocket" width="40" height="40" />Featured In</h3>
+<h3> <img src="https://raw.githubcontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" alt="Rocket" width="40" height="40" />Featured In</h3>
 
-<h3><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/tarikul-islam-anik/main/assets/images/Writing%20Hand%20Light%20Skin%20Tone.png" alt="Rocket" width="40" height="40" />Project Overview</h3>
+<h3><img src="https://raw.githubcontent.com/Tarikul-Islam-Anik/tarikul-islam-anik/main/assets/images/Writing%20Hand%20Light%20Skin%20Tone.png" alt="Rocket" width="40" height="40" />Project Overview</h3>
 <p style="font-family:var(--ff-philosopher);">
-It is an online platform which enables users to create, manage, and participate in voting events.</p>
+It is an online platform which enables s to create, manage, and participate in voting events.</p>
 
-## <p style="font-family:var(--ff-philosopher);font-size:3rem;text-align:center;"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/High%20Voltage.png" alt="High Voltage" width="40" height="40" />Tech Stack</p>
+## <p style="font-family:var(--ff-philosopher);font-size:3rem;text-align:center;"><img src="https://raw.githubcontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/High%20Voltage.png" alt="High Voltage" width="40" height="40" />Tech Stack</p>
 <center><a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white"></a>
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?style=for-the-badge&logo=JavaScript&logoColor=black"></a>
 <a href="https://react.dev/"><img src="https://img.shields.io/badge/-ReactJs-61DAFB?logo=react&logoColor=white&style=for-the-badge"></a>
@@ -48,7 +48,7 @@ It is an online platform which enables users to create, manage, and participate 
 
 <br><br>
 
-Welcome to the **Voting App** repository! This project allows users to create, manage, and participate in voting events. The app is built with a Node.js backend and a Vite-powered frontend, designed for efficient performance and modern development workflows. This application is fully open source, so feel free to contribute or adapt it to your own needs.
+Welcome to the **Voting App** repository! This project allows s to create, manage, and participate in voting events. The app is built with a Node.js backend and a Vite-powered frontend, designed for efficient performance and modern development workflows. This application is fully open source, so feel free to contribute or adapt it to your own needs.
 
 ## Scope for this project
 
@@ -58,7 +58,7 @@ Welcome to the **Voting App** repository! This project allows users to create, m
 - Creation of backend/database. 🗄️  
 - Creation of frontend (Majorly dark theme). 🌙  
 - How to scale is globally. 🌍  
-- Restrictions to user. User should be able to vote once per poll event. 🚫🗳️
+- Restrictions to .  should be able to vote once per poll event. 🚫🗳️
 
 ## Table of Contents
 
@@ -74,10 +74,10 @@ Welcome to the **Voting App** repository! This project allows users to create, m
 
 ## Features
 
-- User authentication (Login/Register) 🔑
+-  authentication (Login/Register) 🔑
 - Create and manage polls 🗳️
 - Real-time vote updates ⚡
-- Responsive and intuitive user interface 📱
+- Responsive and intuitive  interface 📱
 - Data persistence with MongoDB 💾
 - Backend REST API built with Node.js 🖥️
 - Frontend built with Vite (React/Vite, as applicable) 🚀
@@ -93,8 +93,8 @@ Welcome to the **Voting App** repository! This project allows users to create, m
 
 The project is divided into two main folders:
 
-- **Backend-server**: This contains the Node.js application code that serves as the API layer, handling user authentication, poll creation, and voting logic.
-- **Frontend-server**: This contains the client-side code built using Vite, providing a modern interface for users to interact with the application.
+- **Backend-server**: This contains the Node.js application code that serves as the API layer, handling  authentication, poll creation, and voting logic.
+- **Frontend-server**: This contains the client-side code built using Vite, providing a modern interface for s to interact with the application.
 
 ## Setup Instructions
 
@@ -106,7 +106,7 @@ Make sure you have the following installed:
 - npm or yarn
 - MongoDB (running locally or hosted)
 
-## <p style="font-size:3rem;"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" alt="Rocket" width="40" height="40" />Get Started</p>
+## <p style="font-size:3rem;"><img src="https://raw.githubcontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" alt="Rocket" width="40" height="40" />Get Started</p>
 
 # Setting up repository
 
@@ -114,7 +114,7 @@ Make sure you have the following installed:
 2. Clone the forked repository to your local machine.
 
 ```bash
- git clone https://github.com/your-username/voting-app.git
+ git clone https://github.com/your-name/voting-app.git
 ```
 
 3. Navigate to the project directory.
@@ -182,11 +182,11 @@ Make sure you have the following installed:
 2. **Clone the repository:**
    Clone the forked repository to your local machine using the following command in your terminal.
    ```bash
-   git clone https://github.com/<your-github-username>/PollQ
+   git clone https://github.com/<your-github-name>/PollQ
    ```
 3. **Add a remote upstream:**
    ```bash
-   git remote add upstream https://github.com/original-owner-username/PollQ
+   git remote add upstream https://github.com/original-owner-name/PollQ
    ```
 4. **Create a new branch:**
    Create a new branch for your changes. Run the following command in your terminal.
@@ -221,26 +221,26 @@ Make sure you have the following installed:
 
 To contribute to the Retro repository using GitHub Desktop, follow these steps:
 
-<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/tarikul-islam-anik/main/assets/images/Lady%20Beetle.png" width="20" height="20"> Reporting a bug<br>
-<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/tarikul-islam-anik/main/assets/images/Man%20Technologist%20Light%20Skin%20Tone.png" width="20" height="20" >Discussing the current state of the code<br>
-<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Axe.png" width="20" height="20" >Submitting a fix<br>
-<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/tarikul-islam-anik/main/assets/images/Rocket.png" width="20" height="20" >Proposing new features
+<img src="https://raw.githubcontent.com/Tarikul-Islam-Anik/tarikul-islam-anik/main/assets/images/Lady%20Beetle.png" width="20" height="20"> Reporting a bug<br>
+<img src="https://raw.githubcontent.com/Tarikul-Islam-Anik/tarikul-islam-anik/main/assets/images/Man%20Technologist%20Light%20Skin%20Tone.png" width="20" height="20" >Discussing the current state of the code<br>
+<img src="https://raw.githubcontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Axe.png" width="20" height="20" >Submitting a fix<br>
+<img src="https://raw.githubcontent.com/Tarikul-Islam-Anik/tarikul-islam-anik/main/assets/images/Rocket.png" width="20" height="20" >Proposing new features
 
 To get started with contributing, please follow the steps outlined in the [Contributing.md](Contributing.md).
 
 <div align="center">
-  <h2 style="font-size:3rem;">Our Contributors <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Red%20Heart.png" alt="Red Heart" width="40" height="40" /></h2>
+  <h2 style="font-size:3rem;">Our Contributors <img src="https://raw.githubcontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Red%20Heart.png" alt="Red Heart" width="40" height="40" /></h2>
   <h3>Thank you for contributing to our repository</h3>
 <a href="https://github.com/namansharma3007/PollQ/graphs/contributors">
 <img src="https://contributors-img.web.app/image?repo=namansharma3007/PollQ"/>
 
   </a>
-<p style="font-family:var(--ff-philosopher);font-size:3rem;"><b> Show some <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Red%20Heart.png" alt="Red Heart" width="40" height="40" /> by starring this awesome repository!
+<p style="font-family:var(--ff-philosopher);font-size:3rem;"><b> Show some <img src="https://raw.githubcontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Red%20Heart.png" alt="Red Heart" width="40" height="40" /> by starring this awesome repository!
 
 </div>
 <center>
 <h3 style="font-size:2rem;">
-If you find this project helpful, please consider giving it a star! <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/tarikul-islam-anik/main/assets/images/Star.png" width="30" height="30"></p>
+If you find this project helpful, please consider giving it a star! <img src="https://raw.githubcontent.com/Tarikul-Islam-Anik/tarikul-islam-anik/main/assets/images/Star.png" width="30" height="30"></p>
 </center>
 
 ### Note:

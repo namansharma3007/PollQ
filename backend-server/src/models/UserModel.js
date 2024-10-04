@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from "mongoose";
 
 const { Schema } = mongoose;
 
@@ -18,6 +18,10 @@ const userSchema = new Schema(
       enum: ['admin', 'user'],
       default: 'user',
     },
+    userBio: {
+      type: String,
+      required: false
+    },
     phone: {
       type: String,
       required: false,
@@ -29,8 +33,7 @@ const userSchema = new Schema(
     password: {
       type: String,
       required: true,
-      minLength: 8,
-      maxLength: 20,
+      minLength: 8
     },
   },
   { timestamps: true },
