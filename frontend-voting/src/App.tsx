@@ -12,31 +12,8 @@ import Sidebar from "./components/Sidebar";
 
 //@ts-ignore
 import CreateNewPoll from "./pages/CreateNewpoll";
-<<<<<<< HEAD
 import PageNotFound from "./components/PageNotFound";
 import Result from "./pages/Result";
-=======
-import ForgotPassword from "./pages/ForgotPassword";
-
-import ContactUs from "./pages/ContactUs";
-
-const AuthLayout = () => {
-  return (
-    <>
-      <NavBar />
-      <Outlet />
-    </>
-  );
-};
-const NonAuthLayout = () => {
-  return (
-    <div className="flex p-1">
-      <Sidebar />
-      <Outlet />
-    </div>
-  );
-};
->>>>>>> caee727e4c5c21b5e0fc3cd1f224137cd16c57ee
 
 function App() {
   const [authCheck, setAuthCheck] = useState<boolean>(false);
@@ -70,14 +47,7 @@ function App() {
               <Route path="/" element={<Landing />} />
               <Route path="/home" element={<Home />} />
               <Route path="/createnewpoll" element={<CreateNewPoll />} />
-<<<<<<< HEAD
               <Route path="/results" element={<Result />} />
-=======
-
-              <Route path="/login" element={<Login />} />
-              <Route path="/signup" element={<Signup />} />
-              <Route path="/forgot-password" element={<ForgotPassword />} />
->>>>>>> caee727e4c5c21b5e0fc3cd1f224137cd16c57ee
             </Routes>
           </div>
         )}
