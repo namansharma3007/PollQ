@@ -9,9 +9,29 @@ import Registration from "./pages/Registration";
 import Ballotview from "./pages/Ballotview";
 import Home from "./pages/Home";
 import Sidebar from "./components/Sidebar";
+
 //@ts-ignore
 import CreateNewPoll from "./pages/CreateNewpoll";
 import ForgotPassword from "./pages/ForgotPassword";
+
+import ContactUs from "./pages/ContactUs";
+
+const AuthLayout = () => {
+  return (
+    <>
+      <NavBar />
+      <Outlet />
+    </>
+  );
+};
+const NonAuthLayout = () => {
+  return (
+    <div className="flex p-1">
+      <Sidebar />
+      <Outlet />
+    </div>
+  );
+};
 
 function App() {
   const [authCheck, setAuthCheck] = useState<boolean>(false);
@@ -45,6 +65,7 @@ function App() {
               <Route path="/" element={<Landing />} />
               <Route path="/home" element={<Home />} />
               <Route path="/createnewpoll" element={<CreateNewPoll />} />
+
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
               <Route path="/forgot-password" element={<ForgotPassword />} />
@@ -53,6 +74,19 @@ function App() {
         )}
 
         <div></div>
+
+              <Route path="/contact" element={<ContactUs />} />
+
+            </Route>
+          ) : (
+            <Route element={<NonAuthLayout />}>
+              <Route path="/home" element={<Home />} />
+              <Route path="/createnewpoll" element={<CreateNewPoll />} />
+            </Route>
+          )}
+          <Route path="*" element={<PageNotFound />} />
+        </Routes>
+
       </div>
     </>
   );

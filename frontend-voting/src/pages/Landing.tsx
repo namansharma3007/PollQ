@@ -1,6 +1,10 @@
+
 import { useState } from "react";
 import Sidebar from "../components/Sidebar";
 import { Link } from "react-router-dom";
+
+import { useState } from 'react';
+import Sidebar from '../components/Sidebar';
 
 const Landing = () => {
   const [isDarkMode, setIsDarkMode] = useState(true); // Default to dark mode
@@ -33,6 +37,7 @@ const Landing = () => {
           <span className="px-4">PollQ</span>
         </div>
         <nav className="space-x-6">
+
           <a
             href="#about"
             className={`hover:text-blue-500 ${
@@ -55,6 +60,14 @@ const Landing = () => {
             className={`mt-4 px-6 py-3 rounded-full bg-purple-500 text-white hover:bg-purple-600`}
           >
             {isDarkMode ? "Light Mode" : "Dark Mode"}
+=======
+          <a href="#about" className={`hover:text-blue-500 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>About</a>
+          <a href="/contact" className={`hover:text-blue-500 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Contact</a>
+          <button 
+            onClick={toggleDarkMode} 
+            className={`mt-4 px-6 py-3 rounded-full bg-purple-500 text-white hover:bg-purple-600`}>
+            {isDarkMode ? 'Light Mode' : 'Dark Mode'}
+
           </button>
         </nav>
       </div>
