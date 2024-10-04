@@ -6,8 +6,8 @@ export default function Sidebar() {
   const [isCollapsed, setIsCollapsed] = useState(true);
 
   return (
-    <div className={`h-[43rem] w-20`}>
-      <div className={`sticky h-[43rem] bg-gray-p ${isCollapsed ? "w-20" : "w-72"} p-4 rounded-xl transition-width duration-300`}>
+    <div className={`h-[43rem] w-70`}>
+      <div className={`sticky h-[43rem] bg-gray-p ${isCollapsed ? "w-20" : "w-60"} p-4 rounded-xl transition-width duration-300`}>
       <div className={`flex flex-col`}>
         <div className={`flex ${isCollapsed ? 'justify-center' : 'justify-between'} items-center`}>
           <h1 className={`text-white text-3xl font-bold text-center mt-2 ${isCollapsed ? "hidden" : "block"}`}>pollQ</h1>
