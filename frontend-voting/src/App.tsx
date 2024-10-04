@@ -13,7 +13,6 @@ import CreateNewPoll from "./pages/CreateNewPoll";
 import PageNotFound from "./components/PageNotFound"; 
 import { Outlet } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
-import ContactUsForm from "./components/ContactUsForm";
 import ContactUs from "./pages/ContactUs";
 
 const AuthLayout = () => {
@@ -24,7 +23,6 @@ const AuthLayout = () => {
     </>
   );
 };
-
 const NonAuthLayout = () => {
   return (
     <div className="flex p-1">
@@ -43,7 +41,6 @@ function App() {
       <div className="h-screen w-screen absolute -z-10 bg-black-p"></div>
       <div className="relative">
         <Routes>
-          {/* Non-authenticated routes */}
           {!authCheck ? (
             <Route element={<AuthLayout />}>
               <Route path="/" element={<Landing />} />
@@ -51,17 +48,29 @@ function App() {
               <Route path="/signup" element={<Signup />} />
               <Route path="/registration" element={<Registration />} />
               <Route path="/ballotview" element={<Ballotview />} />
-              <Route path="/contact" element={<ContactUs />} />
+              {/* <Route path="/home" element={<Home />} /> */}
+            </Routes>
+          </div>
+        )}
+
+        {!authCheck && (
+          <div className="">
+            {/* <Sidebar /> */}
+            <Routes>
+              <Route path="/" element={<Landing />} />
               <Route path="*" element={<PageNotFound />} />
+              <Route path="/home" element={<Home />} />
+              <Route path="/createnewpoll" element={<CreateNewPoll />} />
+              <Route path="/contact" element={<ContactUs />} />
+
             </Route>
           ) : (
-            /* Authenticated routes */
             <Route element={<NonAuthLayout />}>
               <Route path="/home" element={<Home />} />
               <Route path="/createnewpoll" element={<CreateNewPoll />} />
-              <Route path="*" element={<PageNotFound />} />
             </Route>
           )}
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
       </div>
     </div>
