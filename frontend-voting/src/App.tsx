@@ -13,6 +13,7 @@ import CreateNewPoll from "./pages/CreateNewPoll";
 import PageNotFound from "./components/PageNotFound"; 
 import { Outlet } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
+import ContactUs from "./pages/ContactUs";
 
 const AuthLayout = () => {
   return (
@@ -60,6 +61,8 @@ function App() {
               <Route path="*" element={<PageNotFound />} />
               <Route path="/home" element={<Home />} />
               <Route path="/createnewpoll" element={<CreateNewPoll />} />
+              <Route path="/contact" element={<ContactUs />} />
+
             </Route>
           ) : (
             <Route element={<NonAuthLayout />}>
