@@ -3,6 +3,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import DBConnection from './Database/db.js';
 import authRoutes from './Routes/auth.js'
+import pollRoutes from './Routes/poll.js'
 
 const app = express();
 
@@ -20,6 +21,8 @@ DBConnection();
 
 app.use(express.json());
 app.use("/auth", authRoutes);
+app.use("/polls", pollRoutes);
+
 
 app.get("/", (req, res)=>{
     res.status(201).json({
