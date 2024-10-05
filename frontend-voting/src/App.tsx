@@ -14,6 +14,7 @@ import Sidebar from "./components/Sidebar";
 import CreateNewPoll from "./pages/CreateNewpoll";
 import PageNotFound from "./components/PageNotFound";
 import Result from "./pages/Result";
+import ForgotPassword from "./pages/ForgotPassword";
 
 function App() {
   const [authCheck, setAuthCheck] = useState<boolean>(false);
@@ -48,13 +49,16 @@ function App() {
               <Route path="/home" element={<Home />} />
               <Route path="/createnewpoll" element={<CreateNewPoll />} />
               <Route path="/results" element={<Result />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/signup" element={<Signup />} />
+              <Route path="/forgot-password" element={<ForgotPassword />} />
             </Routes>
           </div>
         )}
 
         <div></div>
 
-              {/* <Route path="/contact" element={<ContactUs />} />
+        {/* <Route path="/contact" element={<ContactUs />} />
 
             </Route>
           ) : (
