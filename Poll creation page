@@ -1,0 +1,255 @@
+#HTML Code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Poll</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Create a New Poll</h1>
+        <form id="pollForm">
+            <div class="form-group">
+                <label for="pollTitle">Poll Title <span class="required">*</span></label>
+                <input type="text" id="pollTitle" name="pollTitle" required>
+            </div>
+
+            <div class="form-group">
+                <label for="pollDescription">Description <span class="required">*</span></label>
+                <textarea id="pollDescription" name="pollDescription" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="pollOptions">Options (separate by commas) <span class="required">*</span></label>
+                <input type="text" id="pollOptions" name="pollOptions" required>
+            </div>
+
+            <div class="form-group">
+                <label for="pollStartDate">Start Date <span class="required">*</span></label>
+                <input type="date" id="pollStartDate" name="pollStartDate" required>
+            </div>
+
+            <div class="form-group">
+                <label for="pollEndDate">End Date <span class="required">*</span></label>
+                <input type="date" id="pollEndDate" name="pollEndDate" required>
+            </div>
+
+            <div class="form-group">
+                <label for="voteType">Allow multiple votes per user?</label>
+                <select id="voteType" name="voteType" required>
+                    <option value="single">No (Single Vote)</option>
+                    <option value="multiple">Yes (Multiple Votes)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" id="submitBtn">Create Poll</button>
+            </div>
+        </form>
+
+        <div id="successMessage"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
+#CSS code
+/* Resetting default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Setting up a gradient background for the entire window */
+body, html {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Container styling for the poll form */
+.container {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 600px;
+    animation: slideIn 1s ease-in-out;
+}
+
+/* Heading with subtle shadow effect */
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 32px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling each form group */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Styling for the labels */
+label {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: 600;
+    display: block;
+}
+
+/* Input fields with sleek design */
+input[type="text"],
+input[type="date"],
+textarea,
+select {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    background-color: #f8f8f8;
+    transition: border-color 0.3s, background-color 0.3s, box-shadow 0.3s;
+}
+
+/* Focus effect for input fields */
+input[type="text"]:focus,
+input[type="date"]:focus,
+textarea:focus,
+select:focus {
+    border-color: #6a11cb;
+    background-color: #fff;
+    box-shadow: 0 0 8px rgba(106, 17, 203, 0.2);
+}
+
+/* Resizable textarea for description */
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Button with a gradient background and effects */
+button {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Button hover and active states */
+button:hover {
+    background: linear-gradient(to right, #5e0ed1, #1e6bfa);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Required field indicator */
+.required {
+    color: #e74c3c;
+    margin-left: 5px;
+}
+
+/* Success message styling */
+#successMessage {
+    margin-top: 20px;
+    font-size: 18px;
+    color: green;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Slide-in animation for the container */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive design for small screens */
+@media only screen and (max-width: 768px) {
+    body, html {
+        padding: 20px;
+        overflow-y: scroll;
+    }
+
+    .container {
+        width: 100%;
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    textarea,
+    select {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+}
+
+#Javascript code
+document.getElementById("pollForm").addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    // Form data
+    const title = document.getElementById("pollTitle").value.trim();
+    const description = document.getElementById("pollDescription").value.trim();
+    const options = document.getElementById("pollOptions").value.trim();
+    const startDate = document.getElementById("pollStartDate").value;
+    const endDate = document.getElementById("pollEndDate").value;
+    const voteType = document.getElementById("voteType").value;
+
+    // Validation
+    if (!title || !description || !options || !startDate || !endDate) {
+        alert("Please fill in all required fields.");
+        return;
+    }
+
+    if (new Date(startDate) > new Date(endDate)) {
+        alert("End date must be after start date.");
+        return;
+    }
+
+    // Simulate poll creation success
+    document.getElementById("successMessage").textContent = "Poll created successfully!";
+    document.getElementById("pollForm").reset();
+});
+
+
